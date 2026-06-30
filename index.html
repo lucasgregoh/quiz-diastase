@@ -4,6 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teste da Diástase: Descubra Seu Tipo Agora</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '449193154116638');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
 <style>
   :root {
@@ -1209,6 +1226,9 @@
     if (n===17) loadAnim();
     if (n===19) { buildResult(); }
     if ((n===19 || n===20 || n===21 || n===22) && window.startPurchaseTag) { window.startPurchaseTag(); }
+
+    // Meta Pixel: ViewContent ao entrar na primeira tela do quiz
+    if (n===1 && typeof fbq === 'function') { fbq('track', 'ViewContent'); }
   }
 
   function pick(el, next) {
