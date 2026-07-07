@@ -555,10 +555,10 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     <h2 class="q-title">Há quanto tempo você teve seu último filho?</h2>
     <p class="q-sub">Isso é fundamental para entender o estágio da sua diástase.</p>
     <div class="opts">
-      <div class="opt" onclick="pick(this,3)"><div class="opt-icon">🍼</div><div class="opt-text"><div class="opt-label">Menos de 6 meses</div><div class="opt-desc">Pós-parto recente</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="pick(this,3)"><div class="opt-icon">👶</div><div class="opt-text"><div class="opt-label">6 meses a 2 anos</div><div class="opt-desc">Fase de recuperação</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="pick(this,3)"><div class="opt-icon">🧒</div><div class="opt-text"><div class="opt-label">2 a 5 anos</div><div class="opt-desc">A diástase ainda pode ser tratada</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="pick(this,3)"><div class="opt-icon">👦</div><div class="opt-text"><div class="opt-label">Mais de 5 anos</div><div class="opt-desc">Nunca é tarde, há solução</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="recente" onclick="pick(this,3,'tempoParto')"><div class="opt-icon">🍼</div><div class="opt-text"><div class="opt-label">Menos de 6 meses</div><div class="opt-desc">Pós-parto recente</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="medio" onclick="pick(this,3,'tempoParto')"><div class="opt-icon">👶</div><div class="opt-text"><div class="opt-label">6 meses a 2 anos</div><div class="opt-desc">Fase de recuperação</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="antigo" onclick="pick(this,3,'tempoParto')"><div class="opt-icon">🧒</div><div class="opt-text"><div class="opt-label">2 a 5 anos</div><div class="opt-desc">A diástase ainda pode ser tratada</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="antigo" onclick="pick(this,3,'tempoParto')"><div class="opt-icon">👦</div><div class="opt-text"><div class="opt-label">Mais de 5 anos</div><div class="opt-desc">Nunca é tarde, há solução</div></div><div class="opt-chk"></div></div>
     </div>
   </div>
 
@@ -569,9 +569,9 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     <h2 class="q-title">Qual foi o tipo do seu parto?</h2>
     <p class="q-sub">Cada tipo de parto gera um padrão diferente de diástase.</p>
     <div class="opts">
-      <div class="opt" onclick="pick(this,4)"><div class="opt-icon">🌿</div><div class="opt-text"><div class="opt-label">Parto normal / vaginal</div><div class="opt-desc">Natural ou com anestesia</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="pick(this,4)"><div class="opt-icon">🏥</div><div class="opt-text"><div class="opt-label">Cesárea</div><div class="opt-desc">Protocolo específico para cesárea</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="pick(this,4)"><div class="opt-icon">👩‍👧‍👦</div><div class="opt-text"><div class="opt-label">Tive mais de um filho</div><div class="opt-desc">Partos diferentes ao longo do tempo</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="normal" onclick="pick(this,4,'tipoParto')"><div class="opt-icon">🌿</div><div class="opt-text"><div class="opt-label">Parto normal / vaginal</div><div class="opt-desc">Natural ou com anestesia</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="cesarea" onclick="pick(this,4,'tipoParto')"><div class="opt-icon">🏥</div><div class="opt-text"><div class="opt-label">Cesárea</div><div class="opt-desc">Protocolo específico para cesárea</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="multiplos" onclick="pick(this,4,'tipoParto')"><div class="opt-icon">👩‍👧‍👦</div><div class="opt-text"><div class="opt-label">Tive mais de um filho</div><div class="opt-desc">Partos diferentes ao longo do tempo</div></div><div class="opt-chk"></div></div>
     </div>
   </div>
 
@@ -695,10 +695,10 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     <h2 class="q-title">Como você descreveria sua barriga hoje?</h2>
     <p class="q-sub">Escolha a opção que mais se parece com o que você vê.</p>
     <div class="opts">
-      <div class="opt" onclick="pick(this,12)"><div class="opt-icon">🔵</div><div class="opt-text"><div class="opt-label">Pochete, barriga caída abaixo do umbigo</div><div class="opt-desc">Diástase infraumbilical</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="pick(this,12)"><div class="opt-icon">🟡</div><div class="opt-text"><div class="opt-label">Estufada acima do umbigo</div><div class="opt-desc">Diástase supraumbilical</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="pick(this,12)"><div class="opt-icon">🔴</div><div class="opt-text"><div class="opt-label">Estufada de cima a baixo</div><div class="opt-desc">Diástase total</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="pick(this,12)"><div class="opt-icon">⬜</div><div class="opt-text"><div class="opt-label">Flácida com pele solta (barriga avental)</div><div class="opt-desc">Diástase com flacidez de pele</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="infra" onclick="pick(this,12,'tipoBarriga')"><div class="opt-icon">🔵</div><div class="opt-text"><div class="opt-label">Pochete, barriga caída abaixo do umbigo</div><div class="opt-desc">Diástase infraumbilical</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="supra" onclick="pick(this,12,'tipoBarriga')"><div class="opt-icon">🟡</div><div class="opt-text"><div class="opt-label">Estufada acima do umbigo</div><div class="opt-desc">Diástase supraumbilical</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="total" onclick="pick(this,12,'tipoBarriga')"><div class="opt-icon">🔴</div><div class="opt-text"><div class="opt-label">Estufada de cima a baixo</div><div class="opt-desc">Diástase total</div></div><div class="opt-chk"></div></div>
+      <div class="opt" data-value="avental" onclick="pick(this,12,'tipoBarriga')"><div class="opt-icon">⬜</div><div class="opt-text"><div class="opt-label">Flácida com pele solta (barriga avental)</div><div class="opt-desc">Diástase com flacidez de pele</div></div><div class="opt-chk"></div></div>
     </div>
   </div>
 
@@ -871,20 +871,16 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     </div>
 
     <div class="profile-card">
-      <div class="profile-lbl">O que está acontecendo com você</div>
-      <div class="profile-title">Por que sua barriga não voltou, mesmo fazendo tudo certo</div>
-      <div class="profile-text">
-        Suas respostas confirmam um padrão que vemos em <strong>milhares de mães</strong>: você se esforçou, tentou de tudo, e não funcionou. Não porque você é fraca ou preguiçosa. Mas porque <strong>ninguém te ensinou a ativar o músculo certo.</strong><br><br>
-        A diástase deixou seu músculo transverso abdominal, a sua cinta natural, completamente inativo. Dieta não o ativa. Abdominal não o ativa. Cinta não o ativa. Pelo contrário: eles aumentam a pressão e pioram a abertura.<br><br>
-        Quando você aprende a ativar esse músculo de dentro para fora, com os movimentos certos, <strong>a barriga começa a fechar em dias, não meses.</strong>
-      </div>
+      <div class="profile-lbl">Seu diagnóstico personalizado</div>
+      <div class="profile-title" id="diagCabecalho">Analisando suas respostas…</div>
+      <div class="profile-text" id="diagTexto"></div>
       <div class="sym-found">
-        <div class="sym-found-title">Sinais identificados no seu perfil</div>
-        <span class="stag">✓ Barriga estufada</span>
-        <span class="stag">✓ Escape de xixi</span>
-        <span class="stag">✓ Dor nas costas</span>
-        <span class="stag">✓ Tentativas sem resultado</span>
-        <span class="stag">✓ Autoestima afetada</span>
+        <div class="sym-found-title">Indicadores do seu perfil</div>
+        <div id="diagTags">
+          <span class="stag">✓ Barriga estufada</span>
+          <span class="stag">✓ Escape de xixi</span>
+          <span class="stag">✓ Tentativas sem resultado</span>
+        </div>
       </div>
     </div>
 
@@ -935,7 +931,7 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     </div>
 
     <div class="persuasive-highlight">
-      💚 <strong>Com o Protocolo Fecha Diástase</strong>, você ativa a musculatura profunda em etapas: fechar o músculo, eliminar o inchaço e recuperar a barriga de antes — sem dieta restritiva, sem academia e em apenas 10 minutos por dia.
+      💚 <strong>Com o Protocolo Fecha Diástase</strong>, você ativa a musculatura profunda em etapas: fechar o músculo, eliminar o inchaço e recuperar a barriga de antes, sem dieta restritiva, sem academia e em apenas 10 minutos por dia.
     </div>
 
     <button class="btn btn-pulse" onclick="go(21)">CONTINUAR →</button>
@@ -1045,15 +1041,15 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
         <li class="no">Sem suporte, sem bônus, sem garantia</li>
       </ul>
       <div class="price-wrap basic-price-wrap">
-        <div class="price-now basic-price"><span class="price-prefix">R$</span>1<span class="price-cents">,99</span></div>
-        <div class="price-note basic-note">Pagamento único · Acesso limitado a 7 dias</div>
+        <div class="price-now basic-price"><span class="price-prefix">R$</span>10<span class="price-cents">,90</span></div>
+        <div class="price-note basic-note">Pagamento único · Acesso por 7 dias</div>
       </div>
-      <button class="offer-cta-outline" onclick="openUpsellModal()">Começar só com o básico (resultados mais lentos)</button>
+      <button class="offer-cta-outline" onclick="openUpsellModal()">Começar só com o plano básico por R$10,90</button>
     </div>
 
     <div class="guarantee">
       <div class="guar-medal">🥇</div>
-      <div class="guar-text"><strong>Garantia de 30 dias</strong>Risco ZERO. Válida para quem garantir o Plano Completo. Se você não ver resultado, basta pedir seu dinheiro de volta.</div>
+      <div class="guar-text"><strong>Garantia de 90 dias</strong>Risco ZERO. Válida para quem garantir o Plano Completo. Se você não ver resultado, basta pedir seu dinheiro de volta.</div>
     </div>
 
     <div style="text-align:center;margin:22px 0 14px">
@@ -1101,7 +1097,7 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
       <div class="summary-item">💧 <div>Sua diástase tem solução, mesmo sem academia, dieta ou cirurgia.</div></div>
       <div class="summary-item">⏱️ <div>10 minutos por dia bastam para ativar o músculo certo.</div></div>
       <div class="summary-item">📅 <div>Resultados visíveis em até 21 dias seguindo o protocolo.</div></div>
-      <div class="summary-item">🛡️ <div>O Plano Completo tem garantia de 30 dias, sem risco para você.</div></div>
+      <div class="summary-item">🛡️ <div>O Plano Completo tem garantia de 90 dias, sem risco para você.</div></div>
       <div class="summary-item">💛 <div>Você não está sozinha. Mais de 150 mil mães já passaram por isso.</div></div>
     </div>
 
@@ -1168,11 +1164,12 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
 <div class="modal-overlay" id="upsellModal">
   <div class="modal-box">
     <button class="modal-close" onclick="closeUpsellModal()">✕</button>
-    <div class="modal-title">Ainda dá tempo!</div>
-    <div class="modal-text">A promoção de R$1,99 foi válida até ontem à noite (<strong id="modalYesterday"></strong>) em comemoração às nossas alunas e seguidoras, mas você ainda pode garantir a Oferta Completa com super desconto, bônus exclusivos e acesso vitalício!</div>
+    <div class="modal-title">Espera! Pegue o seu desconto!</div>
+    <div class="modal-text">Receba agora <strong>85% de desconto</strong> no Plano Completo, com todos os <strong>bônus</strong>, suporte no WhatsApp, módulo de assoalho pélvico, garantia de 90 dias e acesso vitalício. Seja rápida e aproveite agora!</div>
     <div class="modal-old-price">De <span>R$197</span> por apenas…</div>
     <div class="modal-price-big"><span class="modal-prefix">R$</span>29</div>
-    <button class="modal-cta" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=2990','_blank')">QUERO GARANTIR A OFERTA COMPLETA →</button>
+    <button class="modal-cta" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=2990','_blank')">Quero o Plano Completo com 85% de desconto agora!</button>
+    <button class="modal-cta-outline" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=1090','_blank'); closeUpsellModal()">Quero apenas o básico sem os bônus incríveis.</button>
   </div>
 </div>
 <script>
@@ -1180,7 +1177,10 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
   var state = {
     peso: 70, altura: 165, ideal: 60,
     ocasiao: '', prazo: 8,
-    nome: ''
+    nome: '',
+    tempoParto: '',
+    tipoParto: '',
+    tipoBarriga: ''
   };
 
   var cur = 0;
@@ -1230,10 +1230,13 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     if (n===1 && typeof fbq === 'function') { fbq('track', 'ViewContent'); }
   }
 
-  function pick(el, next) {
+  function pick(el, next, stateKey) {
     var opts = el.closest('.opts');
     if (opts) opts.querySelectorAll('.opt').forEach(function(c){ c.classList.remove('selected'); });
     el.classList.add('selected');
+    if (stateKey && el.getAttribute('data-value')) {
+      state[stateKey] = el.getAttribute('data-value');
+    }
     setTimeout(function(){ go(next); }, 280);
   }
 
@@ -1325,39 +1328,99 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     if (firstOffer) firstOffer.scrollIntoView({behavior:'smooth', block:'start'});
   }
 
-  // ===== CÁLCULO DO DIAGNÓSTICO (adaptado para diástase) =====
-  function buildResult() {
-    var nomeEl = document.getElementById('diagNome');
-    if (nomeEl) nomeEl.textContent = state.nome || 'Você';
+  // ===== PERFIL DO DIAGNÓSTICO (4 perfis) =====
+  function getProfile() {
+    // Prioridade: cesárea > múltiplos filhos > diástase antiga > pós-parto recente
+    if (state.tipoParto === 'cesarea') return 'cesarea';
+    if (state.tipoParto === 'multiplos') return 'multiplos';
+    if (state.tempoParto === 'antigo') return 'antigo';
+    return 'recente';
+  }
 
-    var peso = state.peso, alt = state.altura/100, ideal = state.ideal;
-    var diff = Math.max(1, peso - ideal);
-
-    // métrica placeholder (equivalente a IMC) usada apenas para posicionar o marcador da barra
-    var metricValue = peso / (alt*alt);
-    var markerPos = Math.min(95, Math.max(5, ((metricValue - 18) / (38-18)) * 100));
-    var markerEl = document.getElementById('marker');
-    if (markerEl) markerEl.style.left = markerPos + '%';
-
-    var grauEl = document.getElementById('grauTexto');
-    if (grauEl) {
-      if (markerPos < 33) grauEl.textContent = 'Leve';
-      else if (markerPos < 66) grauEl.textContent = 'Moderado';
-      else grauEl.textContent = 'Moderado a avançado';
+  var profileData = {
+    recente: {
+      titulo: 'Diástase Pós-Parto Ativa',
+      grau: 'Recente e tratável',
+      markerPos: 45,
+      rangeMin: 3, rangeMax: 7,
+      cabecalho: 'Seu corpo ainda está no período ideal de recuperação.',
+      texto: 'Suas respostas mostram que você está na fase mais responsiva de todas. Nos primeiros meses e anos após o parto, o músculo transverso ainda responde muito rápido à ativação correta. O problema é que ninguém te ensinou o exercício certo. Dieta e abdominal convencional não ativam esse músculo, pelo contrário, aumentam a pressão e pioram a abertura. Com o protocolo certo de 10 minutos por dia, seu corpo está pronto para fechar a diástase em 21 dias.',
+      tags: ['✓ Fase de alta responsividade', '✓ Protocolo acelerado', '✓ Resultado em 21 dias']
+    },
+    cesarea: {
+      titulo: 'Diástase Pós-Cesárea',
+      grau: 'Requer protocolo específico',
+      markerPos: 62,
+      rangeMin: 4, rangeMax: 8,
+      cabecalho: 'A cesárea cria um padrão muscular diferente e precisa de uma abordagem específica.',
+      texto: 'Quem passou por cesárea tem um desafio extra: além da diástase, há uma cicatriz que altera o funcionamento do assoalho pélvico e da musculatura abdominal profunda. Por isso exercícios genéricos não funcionam e podem até piorar. O Protocolo Fecha Diástase tem um módulo específico para cesárea, que respeita a cicatriz e ativa progressivamente o transverso abdominal de forma segura, fechando a diástase de dentro para fora.',
+      tags: ['✓ Módulo específico para cesárea', '✓ Respeita a cicatriz', '✓ Ativação segura e progressiva']
+    },
+    multiplos: {
+      titulo: 'Diástase por Múltiplas Gestações',
+      grau: 'Moderado a avançado',
+      markerPos: 72,
+      rangeMin: 5, rangeMax: 9,
+      cabecalho: 'Cada gestação amplifica a diástase, mas o músculo ainda responde.',
+      texto: 'Múltiplas gestações deixam o músculo transverso progressivamente mais enfraquecido a cada gravidez. O que você sente hoje (barriga que não volta, dores nas costas, escape de xixi) é resultado acumulado de anos de pressão intra-abdominal sem o músculo certo para sustentar. A boa notícia: esse músculo pode ser reativado em qualquer estágio. O protocolo começa da ativação mais básica e evolui gradualmente, respeitando o seu histórico e entregando resultado visível em 21 dias.',
+      tags: ['✓ Protocolo progressivo', '✓ Adaptado para múltiplas gestações', '✓ Resultado visível em 21 dias']
+    },
+    antigo: {
+      titulo: 'Diástase Estabelecida',
+      grau: 'Crônica, mas tem solução',
+      markerPos: 78,
+      rangeMin: 4, rangeMax: 8,
+      cabecalho: 'Anos de diástase sem tratamento não significam que o momento passou.',
+      texto: 'Muitas mães acreditam que depois de alguns anos é tarde demais. Não é. O músculo transverso abdominal responde à ativação correta independentemente de quanto tempo faz que a diástase está aberta. Temos alunas com resultado após 8 anos do parto. O que acontece com o tempo é que o padrão muscular compensatório se instala: você aprendeu a se mover sem usar esse músculo. O protocolo recondiciona esse padrão em 21 dias, ensinando seu corpo a usar a musculatura profunda de novo.',
+      tags: ['✓ Funciona anos após o parto', '✓ Recondiciona o padrão muscular', '✓ Casos reais até 8 anos depois']
     }
+  };
 
-    // range de redução em cm de circunferência abdominal
-    var minLoss = Math.max(1, Math.round(diff * 0.35));
-    var maxLoss = Math.max(minLoss+1, Math.round(diff * 0.7));
+  // ===== CÁLCULO DO DIAGNÓSTICO =====
+  function buildResult() {
+    var nome = state.nome || 'Você';
+    var nomeEl = document.getElementById('diagNome');
+    if (nomeEl) nomeEl.textContent = nome;
+
+    var profile = getProfile();
+    var data = profileData[profile];
+
+    // Atualizar header do resultado
+    var rTitle = document.getElementById('rTitle');
+    if (rTitle) rTitle.textContent = nome + ', identificamos: ' + data.titulo;
+
+    // Barra de indicador
+    var markerEl = document.getElementById('marker');
+    if (markerEl) markerEl.style.left = data.markerPos + '%';
+    var grauEl = document.getElementById('grauTexto');
+    if (grauEl) grauEl.textContent = data.grau;
+
+    // Range de redução
     var rangeEl = document.getElementById('rangePreview');
-    if (rangeEl) rangeEl.textContent = '-' + minLoss + ' e -' + maxLoss + ' cm';
+    if (rangeEl) rangeEl.textContent = '-' + data.rangeMin + ' e -' + data.rangeMax + ' cm';
 
+    // Gráfico
     var chartDateEl = document.getElementById('chartDate');
     if (chartDateEl) chartDateEl.textContent = 'Em ' + state.prazo + ' semanas';
-
     var predEl = document.getElementById('predText');
-    if (predEl) {
-      predEl.innerHTML = 'Você deve atingir sua meta em aproximadamente <span style="color:var(--rose);font-weight:700">' + state.prazo + ' semanas</span>, baseado em casos semelhantes ao seu.';
+    if (predEl) predEl.innerHTML = 'Você deve atingir sua meta em aproximadamente <span style="color:var(--rose);font-weight:700">' + state.prazo + ' semanas</span>, baseado em casos semelhantes ao seu.';
+
+    // Texto personalizado do diagnóstico
+    var cabEl = document.getElementById('diagCabecalho');
+    if (cabEl) cabEl.textContent = data.cabecalho;
+    var textoEl = document.getElementById('diagTexto');
+    if (textoEl) textoEl.textContent = data.texto;
+
+    // Tags do perfil
+    var tagsEl = document.getElementById('diagTags');
+    if (tagsEl) {
+      tagsEl.innerHTML = '';
+      data.tags.forEach(function(t) {
+        var span = document.createElement('span');
+        span.className = 'stag';
+        span.textContent = t;
+        tagsEl.appendChild(span);
+      });
     }
   }
 
@@ -1393,13 +1456,6 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
 
   // ===== MODAL UPSELL =====
   function openUpsellModal() {
-    // Calcular data de ontem e inserir no modal
-    var yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    var day = String(yesterday.getDate()).padStart(2, '0');
-    var month = String(yesterday.getMonth() + 1).padStart(2, '0');
-    var el = document.getElementById('modalYesterday');
-    if (el) el.textContent = day + '/' + month;
     var m = document.getElementById('upsellModal');
     if (m) m.classList.add('show');
   }
