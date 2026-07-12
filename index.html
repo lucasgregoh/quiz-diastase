@@ -1487,7 +1487,12 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     var now = new Date();
     var nextHour = new Date(now.getTime() + 60 * 60 * 1000);
     var hh = String(nextHour.getHours()).padStart(2, '0');
-    var mm = String(nextHour.getMinutes()).padStart(2, '0');
+    var rawMin = nextHour.getMinutes();
+    var mm;
+    if (rawMin < 10) { mm = ''; }
+    else if (rawMin < 25) { mm = '20'; }
+    else if (rawMin < 45) { mm = '30'; }
+    else { mm = ''; }
     var dEl = document.getElementById('modalDeadline');
     if (dEl) dEl.textContent = hh + 'h' + mm;
 
