@@ -1178,11 +1178,11 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     <div class="modal-title">🎉 Ainda dá tempo!</div>
 
     <div class="modal-vagas">
-      <div class="modal-vagas-label"><span>Vagas preenchidas</span><span id="vagasPct">81%</span></div>
-      <div class="modal-vagas-track"><div class="modal-vagas-fill" id="vagasFill" style="width:81%"></div></div>
+      <div class="modal-vagas-label"><span>Vagas preenchidas</span><span id="vagasPct">87%</span></div>
+      <div class="modal-vagas-track"><div class="modal-vagas-fill" id="vagasFill" style="width:87%"></div></div>
     </div>
 
-    <div class="modal-text">A Oferta de R$1,99 finalizou ontem à noite (<strong id="modalYesterday"></strong>) e a Oferta Completa de R$19 vai finalizar HOJE às <strong id="modalDeadline"></strong> ou até fechar as vagas. Ainda dá tempo de garantir com os bônus incríveis e acesso vitalício!</div>
+    <div class="modal-text">A Oferta de R$1,99 finalizou pois fechamos o lote promocional e a Oferta Completa de R$19 vai finalizar HOJE às <strong id="modalDeadline"></strong> ou até fechar as vagas. Ainda dá tempo de garantir com os bônus incríveis e acesso vitalício!</div>
 
     <div class="modal-comemoracao">Promoção em comemoração às 150 mil alunas, aproveite agora.</div>
 
@@ -1558,10 +1558,10 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
 
   // ===== BARRA DE VAGAS PROGRESSIVA =====
   var vagasTimer = null;
-  var vagasPct = 81;
+  var vagasPct = 87;
   function startVagasProgress() {
     // Reset ao abrir o modal
-    vagasPct = 81;
+    vagasPct = 87;
     updateVagas();
     if (vagasTimer) clearInterval(vagasTimer);
     // Cada 2 minutos (120000 ms), sobe 1% até chegar em 98%
@@ -1572,7 +1572,7 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
       } else {
         clearInterval(vagasTimer);
       }
-    }, 120000);
+    }, 60000);
   }
   function updateVagas() {
     var fillEl = document.getElementById('vagasFill');
