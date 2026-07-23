@@ -1563,12 +1563,13 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
   // ===== BARRA DE VAGAS PROGRESSIVA =====
   var vagasTimer = null;
   var vagasPct = 87;
+  var vagasStarted = false;
   function startVagasProgress() {
-    // Reset ao abrir o modal
-    vagasPct = 87;
+    // Sempre mostra o valor atual (sem resetar)
     updateVagas();
-    if (vagasTimer) clearInterval(vagasTimer);
-    // Cada 2 minutos (120000 ms), sobe 1% até chegar em 98%
+    // Timer iniciado apenas uma vez, nunca para ao fechar/abrir o modal
+    if (vagasStarted) return;
+    vagasStarted = true;
     vagasTimer = setInterval(function() {
       if (vagasPct < 98) {
         vagasPct++;
@@ -1588,7 +1589,7 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
     var m = document.getElementById('upsellModal');
     if (m) m.classList.remove('show');
     if (confettiAnim) { cancelAnimationFrame(confettiAnim); confettiAnim = null; }
-    if (vagasTimer) { clearInterval(vagasTimer); vagasTimer = null; }
+    // vagasTimer continua rodando ao fechar para manter progresso
   }
 
   // ===== MECÂNICA 1: TAG "AO VIVO" NA LANDING =====
