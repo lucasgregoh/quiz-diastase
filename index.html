@@ -482,6 +482,8 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
   .modal-vagas-label { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 700; color: var(--rose-dark); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
   .modal-vagas-track { height: 10px; background: #F0E6E9; border-radius: 99px; overflow: hidden; box-shadow: inset 0 1px 2px rgba(0,0,0,0.08); }
   .modal-vagas-fill { height: 100%; background: linear-gradient(90deg, var(--rose), #E8884A, #D4A853); border-radius: 99px; transition: width 1.2s cubic-bezier(.4,0,.2,1); box-shadow: 0 0 8px rgba(200,85,106,0.5); }
+  .modal-skip { background: #fff; border: 1.5px solid #ddd; color: #999; font-size: 12px; text-decoration: none; cursor: pointer; margin-top: 10px; padding: 10px 16px; display: block; width: 100%; text-align: center; font-family: inherit; border-radius: 8px; font-weight: 500; }
+  .modal-skip:hover { border-color: #bbb; color: #666; }
   .modal-comemoracao { font-size: 11.5px; color: var(--light-mid); font-style: italic; margin-bottom: 16px; font-weight: 400; }
 
 </style>
@@ -1037,10 +1039,10 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
       </ul>
       <div class="price-wrap">
         <div class="price-old">De R$ 197</div>
-        <div class="price-now"><span class="price-prefix">R$</span>21</div>
+        <div class="price-now"><span class="price-prefix">R$</span>19<span class="price-cents">,90</span></div>
         <div class="price-note">🔒 Pagamento único · Acesso vitalício · Atualizações inclusas</div>
       </div>
-      <button class="offer-cta-white" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=2100','_blank')">✅ Quero o plano completo por R$21 →</button>
+      <button class="offer-cta-white" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=1990','_blank')">✅ Quero o plano completo por R$19,90 →</button>
       <div class="offer-pin-note">📌 Pague uma vez e tenha acesso para sempre</div>
     </div>
 
@@ -1183,13 +1185,14 @@ src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
       <div class="modal-vagas-track"><div class="modal-vagas-fill" id="vagasFill" style="width:87%"></div></div>
     </div>
 
-    <div class="modal-text">A Oferta de R$1,99 finalizou pois fechamos o lote promocional e a Oferta Completa de R$21 vai finalizar HOJE às <strong id="modalDeadline"></strong> ou até fechar as vagas. Ainda dá tempo de garantir com os bônus incríveis e acesso vitalício!</div>
+    <div class="modal-text">A Oferta de R$1,99 finalizou pois fechamos o lote promocional e a Oferta Completa de R$19,90 vai finalizar HOJE às <strong id="modalDeadline"></strong> ou até fechar as vagas. Ainda dá tempo de garantir com os bônus incríveis e acesso vitalício!</div>
 
     <div class="modal-comemoracao">Promoção em comemoração às 150 mil alunas, aproveite agora.</div>
 
     <div class="modal-old-price">De <span>R$197</span> por apenas…</div>
-    <div class="modal-price-big"><span class="modal-prefix">R$</span>21</div>
-    <button class="modal-cta" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=2100','_blank')">Quero a oferta completa com desconto!</button>
+    <div class="modal-price-big"><span class="modal-prefix">R$</span>19<span class="modal-cents">,90</span></div>
+    <button class="modal-cta" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=1990','_blank')">Quero a oferta completa com desconto!</button>
+    <button class="modal-skip" onclick="closeUpsellModal()">Obrigada, mas vou deixar passar essa oportunidade.</button>
   </div>
 </div>
 <script>
