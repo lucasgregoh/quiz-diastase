@@ -1093,7 +1093,7 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
         <div class="price-now"><span class="price-prefix">R$</span>19<span class="price-cents">,90</span></div>
         <div class="price-note">🔒 Pagamento único · Acesso vitalício · Atualizações inclusas</div>
       </div>
-      <button class="offer-cta-white" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=1990','_blank')">✅ Quero o plano completo por R$19,90 →</button>
+      <button class="offer-cta-white" onclick="goCheckout('https://diastpay.myrnnagurgel.com.br/?preco=1990')">✅ Quero o plano completo por R$19,90 →</button>
       <div class="offer-pin-note">📌 Pague uma vez e tenha acesso para sempre</div>
     </div>
 
@@ -1242,7 +1242,7 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
 
     <div class="modal-old-price">De <span>R$197</span> por apenas…</div>
     <div class="modal-price-big"><span class="modal-prefix">R$</span>19<span class="modal-cents">,90</span></div>
-    <button class="modal-cta" onclick="window.open('https://diastpay.myrnnagurgel.com.br/?preco=1990','_blank')">Quero a oferta completa com desconto!</button>
+    <button class="modal-cta" onclick="goCheckout('https://diastpay.myrnnagurgel.com.br/?preco=1990')">Quero a oferta completa com desconto!</button>
     <button class="modal-skip" onclick="showModalDownsell()">Obrigada, mas vou deixar passar essa oportunidade.</button>
 
 
@@ -1261,6 +1261,39 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
 
   var cur = 0;
   var pMap = {1:8,2:14,3:20,4:26,5:32,6:36,7:42,8:48,9:54,10:60,11:66,12:72,13:78,14:84,15:88,16:92,17:95,18:97,19:99,20:99,21:99,22:100};
+
+  // ===== CHECKOUT: salva estado e navega na mesma aba =====
+  function goCheckout(url) {
+    try {
+      sessionStorage.setItem('quiz_cur', cur);
+      sessionStorage.setItem('quiz_state', JSON.stringify(state));
+      sessionStorage.setItem('quiz_scroll', window.scrollY);
+    } catch(e) {}
+    window.location.assign(url);
+  }
+
+  // ===== RESTAURA ESTADO ao voltar do checkout =====
+  (function restoreFromCheckout() {
+    try {
+      var savedCur = sessionStorage.getItem('quiz_cur');
+      if (savedCur === null) return;
+      var savedState = sessionStorage.getItem('quiz_state');
+      var savedScroll = sessionStorage.getItem('quiz_scroll');
+      sessionStorage.removeItem('quiz_cur');
+      sessionStorage.removeItem('quiz_state');
+      sessionStorage.removeItem('quiz_scroll');
+      if (savedState) {
+        var parsed = JSON.parse(savedState);
+        for (var k in parsed) { if (parsed.hasOwnProperty(k)) state[k] = parsed[k]; }
+      }
+      var n = parseInt(savedCur, 10);
+      if (!isNaN(n)) {
+        go(n);
+        var scrollY = parseInt(savedScroll, 10) || 0;
+        if (scrollY > 0) { setTimeout(function(){ window.scrollTo(0, scrollY); }, 100); }
+      }
+    } catch(e) {}
+  })();
 
   // ===== LAZY LOAD DE IMAGENS =====
   function lazyLoadScreen(n) {
@@ -1653,7 +1686,7 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
     var box = document.querySelector('#upsellModal .modal-box');
     if (!box) return;
     var html = '';
-    html += '<div class="modal-downsell-badge">&#128293; S&oacute; pra voc&ecirc;</div>';
+
     html += '<div class="modal-downsell-title">&Uacute;ltima chance antes de voc&ecirc; ir embora...</div>';
     html += '<div class="modal-downsell-text">Como voc&ecirc; chegou at&eacute; aqui, vou liberar o acesso <strong>completo com todos os b&ocirc;nus</strong> por apenas:</div>';
     html += '<div class="modal-downsell-price"><span class="modal-prefix">R$</span>9<span class="modal-cents">,90</span></div>';
@@ -1664,7 +1697,7 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
   }
 
   function goDownsellCheckout() {
-    window.open('https://diastpay.myrnnagurgel.com.br/?preco=0990', '_blank');
+    goCheckout('https://diastpay.myrnnagurgel.com.br/?preco=0990');
   }
 
   var downsellUsed = false;
