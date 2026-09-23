@@ -803,11 +803,11 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
     <button class="back" onclick="go(15)">← Voltar</button>
     <div class="q-tag">Última etapa</div>
     <h2 class="q-title">Em quanto tempo você gostaria de ver resultado?</h2>
-    <p class="q-sub">Vamos montar sua projeção personalizada com base nesse prazo.</p>
+    <p class="q-sub">Vamos organizar como acompanhar sua evolução nesse prazo.</p>
     <div class="opts">
-      <div class="opt" onclick="prazoPick(this,4,17)"><div class="opt-icon">⚡</div><div class="opt-text"><div class="opt-label">4 semanas</div><div class="opt-desc">Resultado rápido e intenso</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="prazoPick(this,8,17)"><div class="opt-icon">🌱</div><div class="opt-text"><div class="opt-label">8 semanas</div><div class="opt-desc">Equilíbrio entre ritmo e consistência</div></div><div class="opt-chk"></div></div>
-      <div class="opt" onclick="prazoPick(this,12,17)"><div class="opt-icon">🌸</div><div class="opt-text"><div class="opt-label">12 semanas</div><div class="opt-desc">Ritmo tranquilo, sem pressa</div></div><div class="opt-chk"></div></div>
+      <div class="opt" onclick="prazoPick(this,4,17)"><div class="opt-icon">⚡</div><div class="opt-text"><div class="opt-label">4 semanas</div><div class="opt-desc">Acompanhar suas primeiras mudanças</div></div><div class="opt-chk"></div></div>
+      <div class="opt" onclick="prazoPick(this,8,17)"><div class="opt-icon">🌱</div><div class="opt-text"><div class="opt-label">8 semanas</div><div class="opt-desc">Acompanhar seu progresso com constância</div></div><div class="opt-chk"></div></div>
+      <div class="opt" onclick="prazoPick(this,12,17)"><div class="opt-icon">🌸</div><div class="opt-text"><div class="opt-label">12 semanas</div><div class="opt-desc">Acompanhar sua evolução com mais tempo</div></div><div class="opt-chk"></div></div>
     </div>
   </div>
   <!-- SCREEN 17: LOADING -->
@@ -865,10 +865,9 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
   <div class="screen" id="s19">
 
     <div class="res-header">
-      <p style="font-size:12.5px;opacity:.85;font-weight:400;margin-bottom:6px">Com base no seu perfil…</p>
-      <div class="res-title"><span id="diagNome">Você</span>, você pode reduzir entre</div>
-      <div class="range-big" id="rangePreview">-3 e -7 cm</div>
-      <div class="res-sub">de circunferência abdominal nas próximas semanas</div>
+       <p style="font-size:12.5px;opacity:.85;font-weight:400;margin-bottom:6px">Seu resultado pode começar agora</p>
+       <div class="res-title" id="diagHeadline" style="font-size:26px;line-height:1.3">Você, você pode reduzir 7 cm já na primeira semana com o Desafio Fecha Diástase!</div>
+       <p style="font-size:11px;opacity:.85;line-height:1.4;margin-top:12px">Resultados individuais variam. Compare sua medida inicial com a da primeira semana.</p>
     </div>
 
     <div class="diag-bar-card">
@@ -881,21 +880,13 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
     </div>
 
     <div class="chart-card">
-      <div class="profile-lbl" style="margin-bottom:14px">Sua projeção de evolução</div>
-      <svg viewBox="0 0 300 80" style="width:100%">
-        <defs>
-          <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#C8556A" stop-opacity="0.25"/>
-            <stop offset="100%" stop-color="#C8556A" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <path id="chartLine" d="M0,10 C60,10 80,20 120,30 C160,40 200,55 300,70" fill="none" stroke="#C8556A" stroke-width="2.5"/>
-        <path id="chartFill" d="M0,10 C60,10 80,20 120,30 C160,40 200,55 300,70 L300,80 L0,80 Z" fill="url(#chartGrad)"/>
-        <circle cx="0" cy="10" r="5" fill="#D4A853"/>
-        <circle cx="300" cy="70" r="5" fill="#C8556A"/>
-      </svg>
-      <div class="chart-labels"><span>Hoje</span><span id="chartDate">Em 8 semanas</span></div>
-      <div id="predText">Você deve atingir sua meta em aproximadamente <span style="color:var(--rose);font-weight:700">8 semanas</span>, baseado em casos semelhantes ao seu.</div>
+       <div class="profile-lbl" style="margin-bottom:14px">Seus marcos de acompanhamento</div>
+       <div style="display:grid;gap:10px;margin-bottom:14px;font-size:13px;line-height:1.5;color:var(--charcoal)">
+         <div><strong>Hoje:</strong> anote sua medida na altura do umbigo e registre uma foto de referência.</div>
+         <div><strong>Semana 1:</strong> repita a medida no mesmo local e compare com o início.</div>
+         <div id="checkpointText"><strong>Semana 8:</strong> compare suas medidas, fotos e como você se sente.</div>
+       </div>
+       <div id="predText">Seu prazo orienta quando comparar os resultados. A mudança em centímetros só pode ser conhecida depois de medir.</div>
     </div>
 
     <div class="profile-card">
@@ -1486,7 +1477,6 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
       titulo: 'Diástase Pós-Parto Ativa',
       grau: 'Recente e tratável',
       markerPos: 45,
-      rangeMin: 3, rangeMax: 7,
       cabecalho: 'Seu corpo ainda está no período ideal de recuperação.',
       texto: 'Suas respostas mostram que você está na fase mais responsiva de todas. Nos primeiros meses e anos após o parto, o músculo transverso ainda responde muito rápido à ativação correta. O problema é que ninguém te ensinou o exercício certo. Dieta e abdominal convencional não ativam esse músculo, pelo contrário, aumentam a pressão e pioram a abertura. Com o protocolo certo de 10 minutos por dia, seu corpo está pronto para fechar a diástase em 21 dias.',
       tags: ['✓ Fase de alta responsividade', '✓ Protocolo acelerado', '✓ Resultado em 21 dias']
@@ -1495,7 +1485,6 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
       titulo: 'Diástase Pós-Cesárea',
       grau: 'Requer protocolo específico',
       markerPos: 62,
-      rangeMin: 4, rangeMax: 8,
       cabecalho: 'A cesárea cria um padrão muscular diferente e precisa de uma abordagem específica.',
       texto: 'Quem passou por cesárea tem um desafio extra: além da diástase, há uma cicatriz que altera o funcionamento do assoalho pélvico e da musculatura abdominal profunda. Por isso exercícios genéricos não funcionam e podem até piorar. O Protocolo Fecha Diástase tem um módulo específico para cesárea, que respeita a cicatriz e ativa progressivamente o transverso abdominal de forma segura, fechando a diástase de dentro para fora.',
       tags: ['✓ Módulo específico para cesárea', '✓ Respeita a cicatriz', '✓ Ativação segura e progressiva']
@@ -1504,7 +1493,6 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
       titulo: 'Diástase por Múltiplas Gestações',
       grau: 'Moderado a avançado',
       markerPos: 72,
-      rangeMin: 5, rangeMax: 9,
       cabecalho: 'Cada gestação amplifica a diástase, mas o músculo ainda responde.',
       texto: 'Múltiplas gestações deixam o músculo transverso progressivamente mais enfraquecido a cada gravidez. O que você sente hoje (barriga que não volta, dores nas costas, escape de xixi) é resultado acumulado de anos de pressão intra-abdominal sem o músculo certo para sustentar. A boa notícia: esse músculo pode ser reativado em qualquer estágio. O protocolo começa da ativação mais básica e evolui gradualmente, respeitando o seu histórico e entregando resultado visível em 21 dias.',
       tags: ['✓ Protocolo progressivo', '✓ Adaptado para múltiplas gestações', '✓ Resultado visível em 21 dias']
@@ -1513,7 +1501,6 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
       titulo: 'Diástase Estabelecida',
       grau: 'Crônica, mas tem solução',
       markerPos: 78,
-      rangeMin: 4, rangeMax: 8,
       cabecalho: 'Anos de diástase sem tratamento não significam que o momento passou.',
       texto: 'Muitas mães acreditam que depois de alguns anos é tarde demais. Não é. O músculo transverso abdominal responde à ativação correta independentemente de quanto tempo faz que a diástase está aberta. Temos alunas com resultado após 8 anos do parto. O que acontece com o tempo é que o padrão muscular compensatório se instala: você aprendeu a se mover sem usar esse músculo. O protocolo recondiciona esse padrão em 21 dias, ensinando seu corpo a usar a musculatura profunda de novo.',
       tags: ['✓ Funciona anos após o parto', '✓ Recondiciona o padrão muscular', '✓ Casos reais até 8 anos depois']
@@ -1523,8 +1510,8 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
   // ===== CÁLCULO DO DIAGNÓSTICO =====
   function buildResult() {
     var nome = state.nome || 'Você';
-    var nomeEl = document.getElementById('diagNome');
-    if (nomeEl) nomeEl.textContent = nome;
+    var headlineEl = document.getElementById('diagHeadline');
+    if (headlineEl) headlineEl.textContent = nome + ', você pode reduzir 7 cm já na primeira semana com o Desafio Fecha Diástase!';
 
     var profile = getProfile();
     var data = profileData[profile];
@@ -1539,15 +1526,10 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
     var grauEl = document.getElementById('grauTexto');
     if (grauEl) grauEl.textContent = data.grau;
 
-    // Range de redução
-    var rangeEl = document.getElementById('rangePreview');
-    if (rangeEl) rangeEl.textContent = '-' + data.rangeMin + ' e -' + data.rangeMax + ' cm';
-
-    // Gráfico
-    var chartDateEl = document.getElementById('chartDate');
-    if (chartDateEl) chartDateEl.textContent = 'Em ' + state.prazo + ' semanas';
-    var predEl = document.getElementById('predText');
-    if (predEl) predEl.innerHTML = 'Você deve atingir sua meta em aproximadamente <span style="color:var(--rose);font-weight:700">' + state.prazo + ' semanas</span>, baseado em casos semelhantes ao seu.';
+    // O prazo determina apenas os marcos de acompanhamento. A chamada principal é fixa.
+    var semanas = [4, 8, 12].indexOf(Number(state.prazo)) !== -1 ? Number(state.prazo) : 8;
+    var checkpointEl = document.getElementById('checkpointText');
+    if (checkpointEl) checkpointEl.innerHTML = '<strong>Semana ' + semanas + ':</strong> compare suas medidas, fotos e como você se sente.';
 
     // Texto personalizado do diagnóstico
     var cabEl = document.getElementById('diagCabecalho');
@@ -1573,7 +1555,7 @@ src="https://www.facebook.com/tr?id=1160695265037280&ev=PageView&noscript=1"
     var steps = [
       {id:'ls1', pct:20, delay:800,  status:'Identificando tipo de diástase…'},
       {id:'ls2', pct:45, delay:1800, status:'Cruzando sintomas e histórico…'},
-      {id:'ls3', pct:65, delay:2800, status:'Calculando sua projeção personalizada…'},
+      {id:'ls3', pct:65, delay:2800, status:'Organizando seu acompanhamento…'},
       {id:'ls4', pct:85, delay:3800, status:'Montando protocolo personalizado…'},
       {id:'ls5', pct:100,delay:4800, status:'Finalizando… quase lá!'}
     ];
